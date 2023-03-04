@@ -3,10 +3,10 @@ import profile from './resources/user_profile_pic.jpg'
 
 export default function UserInfo() {
   return (
-    <div className='user-info flex-col'>
+    <div className='user-info card flex-col'>
       <div className='flex-row align-items profile-img-name'>
         <img className='profile-pic' src={profile} alt="profilepic" />
-        <p className='user-info-name level-1-font-size'>Shubham Barwad</p>
+        <p className='user-info-name level-1-font-size'>John Doe</p>
         <i className="material-symbols-rounded">person_add</i>
       </div>
       <div className='flex-col user-info-content uic-1'>
