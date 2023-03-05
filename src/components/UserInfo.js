@@ -1,22 +1,22 @@
 import React from 'react'
-import profile from './resources/user_profile_pic.jpg'
+import profile from './resources/harry_potter_profile.jpg'
 
 export default function UserInfo() {
   return (
     <div className='user-info card flex-col'>
       <div className='flex-row align-items profile-img-name'>
         <img className='profile-pic' src={profile} alt="profilepic" />
-        <p className='user-info-name level-1-font-size'>John Doe</p>
-        <i className="material-symbols-rounded">person_add</i>
+        <p className='user-info-name level-1-font-size'>Harry Potter</p>
+        <i className="material-symbols-rounded no-fill">manage_accounts</i>
       </div>
       <div className='flex-col user-info-content uic-1'>
         <div className='flex-row align-items'>
           <i className="material-symbols-rounded">location_on</i>
-          <p className='level-2-font-size'>Navi Mumbai, India</p>
+          <p className='level-2-font-size'>Surry, London</p>
         </div>
         <div className='flex-row align-items'>
           <i className="material-symbols-rounded">work</i>
-          <p className='level-2-font-size'>Full-Stack Web Developer</p>
+          <p className='level-2-font-size'>Auror, Ministry of Magic</p>
         </div>
       </div>
       <div className='flex-col user-info-content uic-2'>
@@ -39,17 +39,17 @@ export default function UserInfo() {
             <p className="level-2-font-size">Social Network</p>
           </div>
         </div>
-          <i class="material-symbols-rounded">edit</i>
+          <i className="material-symbols-rounded">edit</i>
         </div>
         <div className='flex-row align-items justify-content-between'>
           <div className="align-items flex-row uic-3-d">
-          <i className="fa-brands fa-twitter"></i>
+          <i className="fa-brands fa-linkedin"></i>
           <div className='flex-col'>
             <p className='level-1-5-font-size'><strong>Linkedin</strong></p>
             <p className="level-2-font-size">Network Platform</p>
           </div>
         </div>
-          <i class="material-symbols-rounded">edit</i>
+          <i className="material-symbols-rounded">edit</i>
         </div>
       </div>
     </div>
