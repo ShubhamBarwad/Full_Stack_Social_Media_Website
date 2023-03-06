@@ -1,7 +1,7 @@
 import React from 'react'
 import profile from './resources/harry_potter_profile.jpg'
 
-export default function comment() {
+export default function comment(props) {
   return (
     <div className='comment-div'>
         <div className='flex-row align-items-top'>

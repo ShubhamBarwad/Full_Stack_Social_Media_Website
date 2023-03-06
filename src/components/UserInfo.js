@@ -1,12 +1,11 @@
 import React from 'react'
-import profile from './resources/harry_potter_profile.jpg'
 
-export default function UserInfo() {
+export default function UserInfo(props) {
   return (
     <div className='user-info card flex-col'>
       <div className='flex-row align-items profile-img-name'>
-        <img className='profile-pic' src={profile} alt="profilepic" />
-        <p className='user-info-name level-1-font-size'>Harry Potter</p>
+        <img className='profile-pic' src={props.profileImg} alt="profilepic" />
+        <p className='user-info-name level-1-font-size'>{props.userName}</p>
         <i className="material-symbols-rounded no-fill">manage_accounts</i>
       </div>
       <div className='flex-col user-info-content uic-1'>

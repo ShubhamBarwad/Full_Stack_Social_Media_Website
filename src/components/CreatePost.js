@@ -1,11 +1,10 @@
 import React from 'react'
-import profile from './resources/harry_potter_profile.jpg'
 
-export default function CreatePost() {
+export default function CreatePost(props) {
   return (
     <div className='create-post-div flex-col card'>
       <div className="new-post-div flex-row align-items justify-content-center">
-        <img className='profile-pic' src={profile} alt="profile pic" />
+      <img className='profile-pic' src={props.profileImg} alt="profilepic" />
         <input type="text" name="createPost" id="createPost" placeholder="What's on your mind?" />
       </div>
       <div className="break"></div>

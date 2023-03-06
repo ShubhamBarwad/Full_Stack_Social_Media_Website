@@ -96,6 +96,9 @@ p strong{
 .hidden{
   display: none;
 }
+.central-column::-webkit-scrollbar {
+  display: none;
+}
 
 
 
@@ -117,7 +120,9 @@ p strong{
 }
 .content{
   padding: 5rem 10rem;
-  gap: 7rem;
+  gap: 15rem;
+  height: 100vh;
+  overflow-y: hidden;
 }
 .profile-pic{
   height: 3rem;
@@ -168,6 +173,8 @@ p strong{
 .central-column{
   flex: 1;
   gap: 1rem;
+  height: 100vh;
+  overflow-y: scroll;
 }
 .create-post-div{
   width: 100%;
@@ -284,10 +291,12 @@ p strong{
 }
 @media (max-width: 540px) {
   .header .header-ls, .hide-on-mobile{
-    display: none;
-  }
-  .header .header-ss{
     display: block;
+  }
+  .header .header-ls{
+    /* display: block; */
+    text-align: center;
+    width: 100%;
   }
   .content > *{
     width: 100%;
@@ -300,5 +309,13 @@ p strong{
   }
   .card{
     border-radius: 0;
+  }
+  .menu{
+    padding: 1rem 5vw;
+    background: var(--primary-color);
+    width: 100%;
+    position: fixed;
+    bottom:0; left: 0;
+    justify-content: space-between;
   }
 }

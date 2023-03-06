@@ -1,15 +1,15 @@
 import React from 'react'
 import senderProfile from './resources/dumbledore_profile.jpg'
 import postImg from './resources/gandalf_post.jpg'
-import profile from './resources/harry_potter_profile.jpg'
 import Comment from './Comment.js'
 
-const showHideComments = () => {
-  let commentParent = document.getElementById('allComments')
-  commentParent.classList.toggle('hidden')
+const showHideComments = (e) => {
+  const commentDiv = e.target.parentElement.parentElement.parentElement.lastChild
+  console.log(e.target.parentElement.parentElement.parentElement.lastChild)
+  commentDiv.classList.toggle('hidden')
 }
 
-export default function Post() {
+export default function Post(props) {
   return (
     <div className='post card flex-col'>
         <div className='flex-row align-items post-user-name'>
@@ -36,10 +36,10 @@ export default function Post() {
           </div>
         </div>
         <div className='flex-row align-items comment-input-div'>
-          <img src={profile} className='profile-pic comment-input' alt='user profile' />
+          <img src={props.profileImg} className='profile-pic comment-input' alt='user profile' />
           <input className='comment-input-box' type="text" name="comment-input-box" id="commentInputBox" placeholder='Add a comment...'/>
         </div>
-        <div className='all-comments anim-scroll hidden' id='allComments'>
+        <div className='all-comments anim-scroll hidden'>
           <Comment/>
           <Comment/>
           <Comment/>
